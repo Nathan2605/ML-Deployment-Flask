@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicción de Bancarrota</title>
+</head>
+<body>
+    <h2>Introduce los valores para la predicción</h2>
+    
+    <form action="/" method="post">
+        <label for="sector">Sector (número):</label>
+        <input type="number" name="sector" id="sector" required><br><br>
+        
+        <label for="roa">ROA:</label>
+        <input type="number" step="any" name="roa" id="roa" required><br><br>
+        
+        <label for="roe">ROE:</label>
+        <input type="number" step="any" name="roe" id="roe" required><br><br>
+        
+        <label for="dr">DR:</label>
+        <input type="number" step="any" name="dr" id="dr" required><br><br>
+        
+        <label for="dc">DC:</label>
+        <input type="number" step="any" name="dc" id="dc" required><br><br>
+        
+        <label for="wcr">WCR:</label>
+        <input type="number" step="any" name="wcr" id="wcr" required><br><br>
+        
+        <input type="submit" value="Predecir">
+    </form>
+    
+    {% if prediction != None %}
+        <h3>Resultado de la predicción: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
