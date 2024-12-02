@@ -5,11 +5,13 @@
 
 from flask import Flask, request, render_template
 from pickle import load
+import joblib
 import numpy as np
 
 app = Flask(__name__)
 # Cargar modelo
-model = load(open("../models/ramfom_forrest_colombia_bank.sav", "rb"))
+#model = load(open("../models/best_rf.pkl", "rb"))
+model = joblib.load('../models/best_rf.pkl')
 
 # Diccionario de clases
 class_dict = {
