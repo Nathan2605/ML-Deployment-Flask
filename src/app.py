@@ -1,5 +1,5 @@
-from src.utils import db_connect
-engine = db_connect()
+#from src.utils import db_connect
+#engine = db_connect()
 
 # your code here
 
@@ -31,7 +31,7 @@ def index():
             wcr = float(request.form["wcr"])
             
             # Crear un array con los valores de entrada
-            data = np.array([[sector, roa, roe, dr, dc, wcr]])
+            data = [[sector, roa, roe, dr, dc, wcr]]
             
             # Realizar predicción
             prediction = model.predict(data)[0]
